@@ -14,6 +14,7 @@ Things you may want to cover:
 * System dependencies
 
 * Configuration
+  - config/application.yml contains all of the environment variables and are on .gitignore file
 
 * Database creation
 
