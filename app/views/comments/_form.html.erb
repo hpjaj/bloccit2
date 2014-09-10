@@ -1,0 +1,10 @@
+<h1>Comments</h1>
+
+<!--  <% form_for @comment #do |f| %>   This is what I did, and it did not work, but why?  -->
+
+  <%= form_for [@post, @post.comments.build], remote: true do |f| %>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+
+    <%= f.submit "Save" %>
+  <% end %>
