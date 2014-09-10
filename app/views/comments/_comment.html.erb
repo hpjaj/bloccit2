@@ -1,0 +1,7 @@
+<small>
+  <% comments.each do |comment| %>
+    <%= comment.body %>
+    <span class="italicize"><%= comment.user.name %></span>
+    <br>
+  <% end %>
+</small>
