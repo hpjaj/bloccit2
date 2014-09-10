@@ -8,6 +8,12 @@ module ApplicationHelper
     end
   end
 
+# alternative solution to above method
+# def sets_div_class_value(errors)
+#    errors_any? ? 'form-group has-error' : ''
+#  end
+
+
   def markdown(text)
     renderer = Redcarpet::Render::HTML.new
     extensions = {fenced_code_blocks: true}
