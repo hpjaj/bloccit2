@@ -1,18 +1,12 @@
 module ApplicationHelper
 
-  def sets_div_class_value(errors)
+  def adds_error_value_to_div_class(errors)
     if errors.any?
-      return 'form-group has-error'
+      return 'has-error'
     else
-      return 'form-group'
+      return ''
     end
   end
-
-# alternative solution to above method
-# def sets_div_class_value(errors)
-#    errors_any? ? 'form-group has-error' : ''
-#  end
-
 
   def markdown(text)
     renderer = Redcarpet::Render::HTML.new
