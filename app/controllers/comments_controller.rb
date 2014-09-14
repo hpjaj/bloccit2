@@ -27,8 +27,6 @@ class CommentsController < ApplicationController
       flash[:error] = "There was a problem deleting your comment.  Please try again."
       redirect_to [@topic, @post]
     end
-      
-    end
   end
 
   private
