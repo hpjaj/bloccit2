@@ -10,13 +10,14 @@
     </div>
   <% end %>
   
-  <div class= <%="#{sets_div_class_value(post.errors[:title])}" %>  >
+  <div class=" <%="#{sets_div_class_value(post.errors[:title])}" %> ">
       <%= f.label :title %>
       <%= f.text_field :title, class: 'form-control', placeholder: "Enter post title" %>
   </div>
-  <div> 
+
+  <div class=" <%="#{sets_div_class_value(post.errors[:body])}" %> "> 
       <%= f.label :body %>
-      <%= f.text_area :body, rows: 8, class: "form-control #{sets_div_class_value(post.errors[:body])}", placeholder: "Enter post body" %>
+      <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter post body" %>
   </div>
 
   <div class="form-group">
