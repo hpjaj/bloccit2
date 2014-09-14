@@ -1,0 +1,12 @@
+# --
+# Environment config file used by Figaro
+# --
+# Configure new developer environment by copying this file to
+# config/application.yml and adding values.
+
+DEVISE_SECRET_KEY: 
+SENDGRID_USERNAME: 
+SENDGRID_PASSWORD: 
+AWS_ACCESS_KEY_ID: 
+AWS_SECRET_ACCESS_KEY: 
+AWS_BUCKET: 
