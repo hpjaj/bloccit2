@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-  def adds_error_value_to_div_class(errors)
+  def adds_css_error_value(errors)
     if errors.any?
       return 'has-error'
     else
