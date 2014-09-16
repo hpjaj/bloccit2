@@ -18,4 +18,16 @@ describe Comment do
       allow( FavoriteMailer )
         .to receive(:new_comment)
         .with(@user, @post, @comment)
-        .and_return
+        .and_return( double(deliver: true) )
+
+      @comment.save
+    end
+
+    it "does not send emails to users who haven't" do
+      expect( FavoriteMailer )
+        .not_to receive(:new_comment)
+
+      @comment.save
+    end
+  end
+end
