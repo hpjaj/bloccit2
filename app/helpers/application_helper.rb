@@ -15,16 +15,16 @@ module ApplicationHelper
     (redcarpet.render text).html_safe
   end
 
-  def up_vote?(post)
-    if "#{(current_user.voted(post) && current_user.voted(post).up_vote?)}"
+  def up_vote_link_classes(post)
+    if (current_user.voted(post) && current_user.voted(post).up_vote?)
       'glyphicon glyphicon-chevron-up voted'
     else
       'glyphicon glyphicon-chevron-up'
     end
   end
 
-  def down_vote?(post)
-    if "#{(current_user.voted(post) && current_user.voted(post).down_vote?)}"
+  def down_vote_link_classes(post)
+    if (current_user.voted(post) && current_user.voted(post).down_vote?)
       'glyphicon glyphicon-chevron-down voted'
     else
       'glyphicon glyphicon-chevron-down'
