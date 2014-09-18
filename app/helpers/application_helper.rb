@@ -1,10 +1,10 @@
 module ApplicationHelper
 
-  def form_group_tag(errors, &block)
+  def adds_css_error_value(errors)
     if errors.any?
-      content_tag :div, capture(&block), class: 'form-group has-error'
+      return 'has-error'
     else
-      content_tag :div, capture(&block), class: 'form-group'
+      return ''
     end
   end
 
