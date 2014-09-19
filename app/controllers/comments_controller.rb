@@ -13,11 +13,13 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:notice] = "Comment was created."
-      redirect_to [@post.topic, @post]
     else
       flash[:error] = "Error creating comment.  Please try again."
-      redirect_to [@post.topic, @post]
-    end 
+    end
+
+    respond_with(@comment) do |format|
+      format.html { redirect_to [@post.topic, @post] }
+    end
   end
 
   def destroy
