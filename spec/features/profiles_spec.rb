@@ -9,9 +9,13 @@ describe "Visiting profiles" do
   before do
     @user = authenticated_user
     @post = associated_post(user: @user)
-    @comment = Comment.new(user: @user, body: "A Comment")
+    @comment = Comment.new(user: @user, body: "A Comment", post: @post)
     allow(@comment).to receive(:send_favorite_emails)
     @comment.save
+  end
+
+  after do
+    Warden.test_reset!
   end
 
   describe "not signed in" do
@@ -26,11 +30,10 @@ describe "Visiting profiles" do
 
   end
 
-  describe "administrator signed in" do
+  describe "signed in" do
 
     before do
-      @user_admin = authenticated_user
-      login_as(@user_admin, :scope => :admin)
+      login_as(@user, :scope => :user)
     end
 
     it "shows profile" do
