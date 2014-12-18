@@ -2,32 +2,17 @@
 
 Made with my mentor at [Bloc](http://bloc.io)
 
-http://harrylevine-bloccit2.herokuapp.com/
+You can visit Bloccit live at: http://harrylevine-bloccit2.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+As a developer, here's how you can test drive the application:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-  - config/application.yml contains all of the environment variables and are on .gitignore file
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- [Git clone](https://github.com/hpjaj/bloccit2.git) the repository
+- Run `$ bundle`
+- Migrate and seed the SQLite3 databases (`rake db:migrate` and `rake db:seed`)
+- Start the server, `$ rails s`, and browse to `localhost:3000` 
+- Sign up for an account
+  - Create, edit and delete posts
+  - Comment on other posts
+  - Add images 
+  - Vote on other posts
+- To run the feature specs, call `$ rspec` from the command line
