@@ -18,3 +18,11 @@ As a developer, here's how you can test drive the application:
   - Add images 
   - Vote on other posts
 - To run the feature specs, call `$ rspec` from the command line
+
+Here is the **Landing** page:
+
+![Landing page](http://hpjaj.com/web-images/bloccit/bloccit-home.jpg)
+
+Here is a sample **Post** page:
+
+![Sample post](http://hpjaj.com/web-images/bloccit/bloccit-post.jpg)
